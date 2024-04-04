@@ -84,7 +84,11 @@ public class ContactBook {
     }
 
     public String emailSearch(String email) {
-        if(head.email.equals(email)) {
+        if (head == null){
+            // Error Handling for empty list
+            return "List is empty";
+        }
+        else if(head.email.equals(email)) {
             // Return the information of the head if it matches the searched email.
             return "Name: " + head.name + "\nPhone Number: " + head.phoneNum;
         }
@@ -128,7 +132,11 @@ public class ContactBook {
     }
 
     public String searchContact(String name) {
-        if(head.name.equals(name)) {
+        if (head == null){
+            // Error Handling for empty list
+            return "List is empty";
+        }
+        else if(head.name.equals(name)) {
             // Returns the contact information of the head if it matches the prompt
             System.out.println(head.name);
             return head.toString();
