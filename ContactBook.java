@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-@SuppressWarnings("ALL")
 public class ContactBook {
     // Acts as Nodes for the Linked List
     static class Contact {
